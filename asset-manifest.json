@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/tracker/static/css/main.48a059b9.css",
+    "main.js": "/tracker/static/js/main.93198302.js",
+    "static/js/453.76cec66e.chunk.js": "/tracker/static/js/453.76cec66e.chunk.js",
+    "static/media/Road_Rage.otf": "/tracker/static/media/Road_Rage.03e8327bbbb7b1abbae9.otf",
+    "static/media/La Raimunda.ttf": "/tracker/static/media/La Raimunda.c0ae5d28ba6077198352.ttf",
+    "static/media/TarifArabic-Bold.ttf": "/tracker/static/media/TarifArabic-Bold.81ed95e48f9ddeea07f9.ttf",
+    "static/media/TarifArabic-Regular.ttf": "/tracker/static/media/TarifArabic-Regular.f743e31ad8394d41493d.ttf",
+    "static/media/Deathridge Demo.ttf": "/tracker/static/media/Deathridge Demo.5bd1c2e1ed132bf0c7e5.ttf",
+    "index.html": "/tracker/index.html",
+    "main.48a059b9.css.map": "/tracker/static/css/main.48a059b9.css.map",
+    "main.93198302.js.map": "/tracker/static/js/main.93198302.js.map",
+    "453.76cec66e.chunk.js.map": "/tracker/static/js/453.76cec66e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.48a059b9.css",
+    "static/js/main.93198302.js"
+  ]
+}
