@@ -5,7 +5,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import { GetStreamer } from "./Services/GetStreamer";
 import NumberFlow from '@number-flow/react'
 
-function Tracker() {
+function Tracker(props) {
     let params = useParams();
     const [goalsCurrent, setGoalsCurrent] = useState([]);
     const [streamerData, setStreamerData] = useState(null);
@@ -38,13 +38,7 @@ function Tracker() {
                     if (currentNew === null && element.reached === false)
                     {
                         currentNew = element;
-                        if (currentGoal === null)
-                        {
-                            setCurrentGoal(currentNew);
-                        }
-                        else if (currentGoal.id !== currentNew.id) {
-                            // New Goal !
-                        }
+                        setCurrentGoal(element);
                     }
                 });
             });
@@ -64,13 +58,7 @@ function Tracker() {
                         if (currentNew === null && element.reached === false)
                         {
                             currentNew = element;
-                            if (currentGoal === null)
-                            {
-                                setCurrentGoal(currentNew);
-                            }
-                            else if (currentGoal.id !== currentNew.id) {
-                                // New Goal !
-                            }
+                            setCurrentGoal(element);
                         }
                     });
 
@@ -84,10 +72,10 @@ function Tracker() {
     }, [params.pseudo]);
 
 
-    return <div className="tracker">
+    return <div className={props.background ? "tracker" : "tracker nobackground"}>
         <Carousel  wrap={true} indicators={false} controls={false} interval={5000}>
-            <Carousel.Item>
-                {currentGoal != null && <div className="trackerGoal">
+            {currentGoal != null && <Carousel.Item>
+                 <div className="trackerGoal">
                     <p className="trackerGoalLabel">{currentGoal.label}</p>
                     <div className="currentGoalBar">
                         <div className="currentGoalProgress" style={{ width: "300px" }}>
@@ -95,15 +83,15 @@ function Tracker() {
                         </div>
                         <p className="currentGoalPrice"><NumberFlow value={currentGoal.streamer_total}/> € / {currentGoal.goal_amount} €</p>
                     </div>
-                </div>}
-            </Carousel.Item>
-            <Carousel.Item>
-                {streamerData != null && <div className="trackerStreamer">
-                    <img src={streamerData.avatar_url} alt={streamerData.display_name} className="avatar"></img>
+                </div>
+            </Carousel.Item>}
+            {streamerData != null && <Carousel.Item>
+                <div className="trackerStreamer">
+                    <img src={streamerData.avatar_url} alt={streamerData.display_name} className="avatar trackerPP"></img>
                     <p className="trackerStreamerName">{streamerData.display_name}</p>
                     <p className="trackerStreamerAmount"><NumberFlow value={currentAmount}/> €</p>
-                </div>}
-            </Carousel.Item>
+                </div>
+            </Carousel.Item>}
         </Carousel>
     </div>;
 }

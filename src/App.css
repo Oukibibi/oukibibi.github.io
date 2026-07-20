@@ -217,3 +217,30 @@
 .streamer .listGoals li .validate {
     color: green;
 }
+
+.utopia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.utopia img {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.mffLogo {
+  margin-left: 10px;
+}
+
+.nobackground {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.nobackground p {
+  color: #111111;
+}
+
+.trackerPP {
+  margin-left: 10px;
+}
