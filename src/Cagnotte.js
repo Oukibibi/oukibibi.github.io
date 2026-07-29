@@ -27,7 +27,7 @@ function Cagnotte(props) {
 
 
     return <div className={props.background ? "tracker" : "tracker nobackground"}>
-        <Carousel wrap={true} indicators={false} controls={false} interval={5000}>
+        {props.slide === true ? <Carousel wrap={true} indicators={false} controls={false} interval={5000}>
             <Carousel.Item>
                 <div className="trackerStreamer">
                     {props.background ? 
@@ -46,7 +46,20 @@ function Cagnotte(props) {
                     }
                 </div>
             </Carousel.Item>
+            
+        </Carousel> :<Carousel wrap={true} indicators={false} controls={false}>
+            <Carousel.Item>
+                <div className="trackerStreamer">
+                    {props.background ? 
+                        <img src="logoWhite.svg" alt="MFF" className="mffLogo" height={80}/> :
+                        <img src="logoMFF_2026_full.svg" alt="MFF" className="mffLogo" height={80}/>
+                    }
+                    <p className="trackerStreamerAmount"><NumberFlow value={currentAmount}/> €</p>
+                </div>
+            </Carousel.Item>
+            
         </Carousel>
+        }
     </div>;
 }
 
