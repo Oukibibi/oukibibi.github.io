@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.340200cc.css",
-    "main.js": "/static/js/main.fc63d1b4.js",
+    "main.js": "/static/js/main.c3517a9d.js",
     "static/js/453.76cec66e.chunk.js": "/static/js/453.76cec66e.chunk.js",
     "static/media/Road_Rage.otf": "/static/media/Road_Rage.03e8327bbbb7b1abbae9.otf",
     "static/media/La Raimunda.ttf": "/static/media/La Raimunda.c0ae5d28ba6077198352.ttf",
@@ -10,11 +10,11 @@
     "static/media/Deathridge Demo.ttf": "/static/media/Deathridge Demo.5bd1c2e1ed132bf0c7e5.ttf",
     "index.html": "/index.html",
     "main.340200cc.css.map": "/static/css/main.340200cc.css.map",
-    "main.fc63d1b4.js.map": "/static/js/main.fc63d1b4.js.map",
+    "main.c3517a9d.js.map": "/static/js/main.c3517a9d.js.map",
     "453.76cec66e.chunk.js.map": "/static/js/453.76cec66e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.340200cc.css",
-    "static/js/main.fc63d1b4.js"
+    "static/js/main.c3517a9d.js"
   ]
 }
